@@ -116,7 +116,7 @@ export default function RegisterForm() {
       privaciPolicy: false
     });
   };
-
+//hhhhhhhh
   return (
     <Form className="register-form" onFinish={register} onChange={changeForm}>
       <Form.Item>
