@@ -5,15 +5,17 @@ import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-ro
 import MenuTop from "../components/Admin/MenuTop/MenuTop";
 import MenuSider from "../components/Admin/MenuSider";
 import AdminSignIn from "../pages/Admin/SignIn/SingnIn";
+import useAuth from "../hooks/useAuth";
 
 import "./LayoutAdmin.scss";
+import { ImportOutlined } from "@ant-design/icons";
 
 
 export default function LayoutAdmin(props) {
   const { routes } = props;
   const [menuCollapsed, setMenuCollapsed] = useState(false);
   const { Header, Content, Footer } = Layout;
-
+console.log(useAuth);
   const user = null;
 
   if(!user){
