@@ -1,6 +1,9 @@
-/* eslint-disable */ 
+
 
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 
-export default () => useContext(AuthContext);
+
+const useAuth = () => useContext(AuthContext);
+
+export default useAuth;
