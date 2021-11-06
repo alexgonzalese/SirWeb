@@ -39,13 +39,57 @@ export function signInApi(data) {
     .then((response) => {
       return response.json();
     })
-    .then (result => {
+    .then((result) => {
       //console.log(result);
       return result;
     })
     .catch((err) => {
       return err.message;
     });
+}
 
+export function getUsersApi(token) {
+  const url = `${basePath}/${apiVersion}/users`;
 
+  const params = {
+    method: "Get",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: token,
+    },
+  };
+
+  return fetch(url, params)
+    .then((response) => {
+      return response.json();
+    })
+    .then((result) => {
+      return result;
+    })
+    .catch((err) => {
+      return err.message;
+    });
+}
+
+export function getUsersStatusApi(token, status) {
+  const url = `${basePath}/${apiVersion}/users-status?active=${status}`;
+
+  const params = {
+    method: "Get",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: token,
+    },
+  };
+
+  return fetch(url, params)
+    .then((response) => {
+      return response.json();
+    })
+    .then((result) => {
+      return result;
+    })
+    .catch((err) => {
+      return err.message;
+    });
 }

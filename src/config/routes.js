@@ -6,6 +6,7 @@ import Admin from "../pages/Admin";
 //Admin Pages
 import AdminHome from "../pages/Admin";
 import AdminSingnIn from "../pages/Admin/SignIn/SingnIn";
+import AdminUsers from "../pages/Admin/Users/Users";
 
 
 //pages
@@ -29,6 +30,11 @@ const routes = [
             {
                 path:"/admin/login",
                 component: AdminSingnIn,
+                exact: true
+            },
+            {
+                path:"/admin/users",
+                component: AdminUsers,
                 exact: true
             },
             {

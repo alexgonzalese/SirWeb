@@ -24,7 +24,7 @@ export default function LayoutAdmin(props) {
 
   //console.log(user);
   //console.log(isLoading);
-  if (user == null && isLoading ) {
+  if (user === null) {
     return (
       <>
         <Route path="/admin/login" component={AdminSignIn} />
